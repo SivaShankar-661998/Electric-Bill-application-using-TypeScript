@@ -1,0 +1,135 @@
+<!-- <html>
+    <head>
+        <title>
+            .Net developer Application
+        </title>
+        <script>
+        function validate()
+            {
+                var name_str = document.getElementById("firstName");
+                var second_str = document.getElementById("lastName");
+                if(name_str.value.trim()=="")
+                {
+                    name_str.style.border="solid 3px red"
+                    document.getElementById("firstNameLable").style.visibility="visible";
+                    alert("No blank name");
+                    return false;
+                }
+                else if(second_str.value.trim()=="")
+                {
+                    second_str.style.border="solid 3px red";
+                    document.getElementById("secondNameLable").style.visibility="visible";
+                    alert("No blank father name")
+                    return false;
+                }
+                
+                else{
+                    validateName()
+                }
+            }
+            function validateName();
+                {
+                    var name1 = document.getElementById("firstName")
+                    var regx=/[a-zA-Z ]/
+                    if(regx.test(name1))
+                    {
+                        document.getElementById("nameLabel").innerHTML="valid";
+                        document.getElementById("nameLabel").style.visibility="visible";
+                        document.getElementById("nameLabel").style.color="green";
+                        return true;
+                    }
+                    else{
+                        name1.style.border = "solid 3px red";
+                        name1.style.visibility="visible"
+                        return false;
+                    }
+                }
+            </script>
+    </head>
+    <body>
+        
+        <form action="registrationSuccessPage.html" onsubmit="return validate()">
+            <h1>Submit your application</h1>
+            <p>for <b>.NET Developer</b></p>
+            <div><h2>Personal information<h2></div>
+            <p>Name as per ID proof</p>
+            <label id="firsrNameLable" style="color: red;visibility: hidden;">Invalid</label>
+            <input id ="firstName" type="text">
+            <p>Father's Name</p>
+            <label id="secondNameLable" style="color: red;visibility: hidden;">Invalid</label>
+            <input id ="lastName" type="text">
+
+            <p>Email</p>
+            <input type="text">
+
+            <p>Date Of Birth</p>
+            <input type="text">
+
+            <p>Current Address</p>
+            <input type="text" placeholder="Addressline1">
+            <input type="text" placeholder="Addressline2"><br><br>
+            <input type="text" placeholder="Districk">
+            <select>
+                <option value="state">Tamil Nadu</option>
+                <option value="state">Kerala</option>
+                <option value="state">Karnataka</option>
+                <option value="state">Telugana</option>
+            </select>
+            <input type="text" placeholder="ZipCode">
+            <button type="submit" >Next</button>
+        
+        </form>
+    </body>
+</html> -->
+
+
+
+<html>
+    <head>
+        <title>
+            <p>JavaScript Connection</p>
+        </title>   
+        <script src="script/script.js"></script>
+        
+    </head>
+    <body>
+        <form >
+        <h1>Submit your application</h1>
+        <p>for <b>.NET Developer</b></p>
+        <p>Name as per ID proof</p>
+        <label id="firstNamelabel" style="color: red;visibility: hidden;">first name is reqiured</label><br>
+        <input id="firstName" type="text"><br>
+        <label id="fatherNamelabel" style="color: red;visibility: hidden;">father name is reqiured</label><br>
+        <input id="fatherName" type="text">
+        
+        <p>Email</p>
+        <label id="emaillabel" style="color: red;visibility: hidden;">emailid is reqiured</label><br>
+        <input id="email" type="text">
+
+        <p>Date Of Birth</p>
+        <label id="doblabel" style="color: red;visibility: hidden;">dateofbirth is reqiured</label><br>
+        <input id="dob" type="text">
+
+        <p>Current Address</p>
+        <label id="addresslabel" style="color: red;visibility: hidden;">address is reqiured</label><br>
+        <input id="add1" type="text" placeholder="Addressline1"><br>
+        <label id="addresslabel2" style="color: red;visibility: hidden;">address is reqiured</label><br>
+        <input id="add2" type="text" placeholder="Addressline2"><br><br>
+        <label id="districklabel" style="color: red;visibility: hidden;">districk is reqiured</label><br>
+        <input id="districk" type="text" placeholder="Districk"><br><br>
+        
+        <select>
+            <option value="state">Tamil Nadu</option>
+            <option value="state">Kerala</option>
+            <option value="state">Karnataka</option>
+            <option value="state">Telugana</option>
+        </select><br>
+        
+        <label id="zipcodelabel" style="color: red;visibility: hidden;">zipcode is reqiured</label><br>
+        <input id="zipCode" type="text" placeholder="ZipCode">
+
+        
+        <button type="button" onclick="validate()">Click</button>
+        </form>    
+    </body>
+</html>
